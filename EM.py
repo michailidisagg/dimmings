@@ -168,8 +168,6 @@ def fit_and_plot(cme_mass, em_diff, em_errors):
                  f'Fit: $y = {intercept / 10 ** int(np.floor(np.log10(abs(intercept)))):.3f} \\times 10^{{{int(np.floor(np.log10(abs(intercept))))}}}+'
                  f'{slope / 10 ** int(np.floor(np.log10(abs(slope)))):.3f} \\times 10^{{{int(np.floor(np.log10(abs(slope))))}}} x$\n'
                  f'$R^2 = {r_squared:.3f}$, $p = {p_value:.3g}$'))
-
-    # Labels and styling
     plt.ylabel('CME Mass ($g$)', fontsize=16)
     plt.xlabel('$EM_{difference}$ ($cm^{-5}$)', fontsize=16)
     plt.grid(True)
@@ -177,8 +175,6 @@ def fit_and_plot(cme_mass, em_diff, em_errors):
     plt.tight_layout()
     plt.show()
 
-
-# Κύριος κώδικας
 data_file = 'dem_results_new_corrected.txt'
 masses_file = 'event_masses.txt'
 output_file = 'em_difference_results.txt'
