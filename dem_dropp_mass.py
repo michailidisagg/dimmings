@@ -114,12 +114,10 @@ files2=[
         "C:\\Users\\ageli\\Desktop\\pythonProject4\\mass\\dem616cor.txt"
 #"C:\\Users\\ageli\\Desktop\\pythonProject4\\mass\\dem625cor.txt"
     ]
-#temps we care abouT
 temps=['6.16']
 #load file with CME masses
 cme_masses_file = "C:\\Users\\ageli\\Desktop\\pythonProject4\\event_masses.txt"
-#self explanatory name of the func...
-def run_da_thing_i_care_about():
+def run_the_main_code():
     i=0 #use it as index for the loop
     #Each dem file has the dem info for one temp. So i make a loop for all temps
     for file in files2:
@@ -138,4 +136,4 @@ def run_da_thing_i_care_about():
         #make plot
         create_plot(dem_ratio_sorted, cme_mass_sorted, err_dem_sorted, temps[i])  # call create_plot
         i = i+1
-run_da_thing_i_care_about()
+run_the_main_code()
